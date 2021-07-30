@@ -1,0 +1,456 @@
+﻿  ArchiveFactory.cpp
+  ArchiveFunction.cpp
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(56,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(59,50): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(94,23): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(166,37): warning C4244: '=': conversion from 'la_ssize_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(195,43): warning C4244: '=': conversion from 'la_ssize_t' to 'long', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(198,47): warning C4244: '=': conversion from 'la_ssize_t' to 'long', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(215,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(218,50): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(316,34): warning C4805: '==': unsafe mix of type 'BOOL' and type 'bool' in operation
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(2575,23): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(2586): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(2586): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(2566): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(2566): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(297): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(297): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  Generating Code...
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_clear already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_clone already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_free already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_new already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_new2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_atime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_atime_nsec already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_atime_is_set already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_birthtime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_birthtime_nsec already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_birthtime_is_set already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_ctime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_ctime_nsec already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_ctime_is_set already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_dev already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_dev_is_set already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_devmajor already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_devminor already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_filetype already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_fflags already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_fflags_text already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_gid already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_gname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_gname_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_gname_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_hardlink already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_hardlink_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_hardlink_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_ino already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_ino64 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_ino_is_set already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_mode already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_mtime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_mtime_nsec already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_mtime_is_set already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_nlink already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_pathname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_pathname_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_pathname_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_perm already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_rdev already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_rdevmajor already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_rdevminor already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_sourcepath already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_sourcepath_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_size already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_size_is_set already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_symlink already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_symlink_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_symlink_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_uid already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_uname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_uname_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_uname_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_is_data_encrypted already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_is_metadata_encrypted already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_is_encrypted already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_atime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_unset_atime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_birthtime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_unset_birthtime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_ctime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_unset_ctime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_dev already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_devmajor already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_devminor already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_filetype already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_fflags already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_fflags_text already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_fflags_text_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_gid already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_gname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_gname_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_gname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_gname_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_update_gname_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_hardlink already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_hardlink_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_hardlink already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_hardlink_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_update_hardlink_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_ino already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_ino64 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_link already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_link_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_link already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_link_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_update_link_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_mode already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_mtime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_unset_mtime already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_nlink already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_pathname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_pathname_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_pathname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_pathname_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_update_pathname_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_perm already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_rdev already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_rdevmajor already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_rdevminor already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_size already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_unset_size already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_sourcepath already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_sourcepath_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_symlink already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_symlink_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_symlink already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_symlink_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_update_symlink_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_uid already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_uname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_uname_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_uname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_uname_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_update_uname_utf8 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_is_data_encrypted already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_set_is_metadata_encrypted already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_mac_metadata already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_copy_mac_metadata already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_acl_clear already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_acl_add_entry already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_acl_add_entry_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_acl_reset already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_acl_next already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_acl_text_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_acl_text already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_acl_count already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry.obj) : warning LNK4006: archive_entry_acl already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_copy_stat.obj) : warning LNK4006: archive_entry_copy_stat already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_link_resolver.obj) : warning LNK4006: archive_entry_linkresolver_new already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_link_resolver.obj) : warning LNK4006: archive_entry_linkresolver_set_strategy already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_link_resolver.obj) : warning LNK4006: archive_entry_linkresolver_free already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_link_resolver.obj) : warning LNK4006: archive_entry_linkify already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_link_resolver.obj) : warning LNK4006: archive_entry_partial_links already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_sparse.obj) : warning LNK4006: archive_entry_sparse_clear already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_sparse.obj) : warning LNK4006: archive_entry_sparse_add_entry already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_sparse.obj) : warning LNK4006: archive_entry_sparse_count already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_sparse.obj) : warning LNK4006: archive_entry_sparse_reset already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_sparse.obj) : warning LNK4006: archive_entry_sparse_next already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_stat.obj) : warning LNK4006: archive_entry_stat already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_strmode.obj) : warning LNK4006: archive_entry_strmode already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_xattr.obj) : warning LNK4006: archive_entry_xattr_clear already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_xattr.obj) : warning LNK4006: archive_entry_xattr_add_entry already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_xattr.obj) : warning LNK4006: archive_entry_xattr_count already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_xattr.obj) : warning LNK4006: archive_entry_xattr_reset already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_xattr.obj) : warning LNK4006: archive_entry_xattr_next already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_new already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_free already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_excluded already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_path_excluded already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_exclude_pattern already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_exclude_pattern_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_exclude_pattern_from_file already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_exclude_pattern_from_file_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_pattern already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_pattern_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_pattern_from_file already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_pattern_from_file_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_path_unmatched_inclusions already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_path_unmatched_inclusions_next already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_path_unmatched_inclusions_next_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_time_excluded already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_time already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_date already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_date_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_file_time already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_file_time_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_exclude_entry already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_owner_excluded already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_uid already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_gid already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_uname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_uname_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_gname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_match.obj) : warning LNK4006: archive_match_include_gname_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_new already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_set_open_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_set_read_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_set_seek_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_set_skip_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_set_close_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_set_switch_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_set_callback_data already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_set_callback_data2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_add_callback_data already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_append_callback_data already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_prepend_callback_data already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_open1 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_open already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_open2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_header_position already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_has_encrypted_entries already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_format_capabilities already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_data already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_seek_data already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_data_skip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read.obj) : warning LNK4006: archive_read_extract_set_skip_file already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_add_passphrase.obj) : warning LNK4006: archive_read_add_passphrase already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_add_passphrase.obj) : warning LNK4006: archive_read_set_passphrase_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_append_filter.obj) : warning LNK4006: archive_read_append_filter already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_append_filter.obj) : warning LNK4006: archive_read_append_filter_program already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_append_filter.obj) : warning LNK4006: archive_read_append_filter_program_signature already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_data_into_fd.obj) : warning LNK4006: archive_read_data_into_fd already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_set_standard_lookup.obj) : warning LNK4006: archive_read_disk_set_standard_lookup already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_extract.obj) : warning LNK4006: archive_read_extract already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_extract2.obj) : warning LNK4006: archive_read_extract2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_extract2.obj) : warning LNK4006: archive_read_extract_set_progress_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_open_fd.obj) : warning LNK4006: archive_read_open_fd already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_open_file.obj) : warning LNK4006: archive_read_open_FILE already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_open_filename.obj) : warning LNK4006: archive_read_open_filename already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_open_filename.obj) : warning LNK4006: archive_read_open_filenames already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_open_filename.obj) : warning LNK4006: archive_read_open_filename_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_open_filename.obj) : warning LNK4006: archive_read_open_file already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_open_memory.obj) : warning LNK4006: archive_read_open_memory already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_open_memory.obj) : warning LNK4006: archive_read_open_memory2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_set_format.obj) : warning LNK4006: archive_read_set_format already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_set_options.obj) : warning LNK4006: archive_read_set_format_option already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_set_options.obj) : warning LNK4006: archive_read_set_filter_option already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_set_options.obj) : warning LNK4006: archive_read_set_option already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_set_options.obj) : warning LNK4006: archive_read_set_options already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_all.obj) : warning LNK4006: archive_read_support_compression_all already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_all.obj) : warning LNK4006: archive_read_support_filter_all already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_bzip2.obj) : warning LNK4006: archive_read_support_compression_bzip2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_bzip2.obj) : warning LNK4006: archive_read_support_filter_bzip2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_compress.obj) : warning LNK4006: archive_read_support_compression_compress already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_compress.obj) : warning LNK4006: archive_read_support_filter_compress already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_gzip.obj) : warning LNK4006: archive_read_support_compression_gzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_gzip.obj) : warning LNK4006: archive_read_support_filter_gzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_grzip.obj) : warning LNK4006: archive_read_support_filter_grzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_lrzip.obj) : warning LNK4006: archive_read_support_filter_lrzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_lz4.obj) : warning LNK4006: archive_read_support_filter_lz4 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_lzop.obj) : warning LNK4006: archive_read_support_filter_lzop already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_none.obj) : warning LNK4006: archive_read_support_compression_none already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_none.obj) : warning LNK4006: archive_read_support_filter_none already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_program.obj) : warning LNK4006: archive_read_support_compression_program already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_program.obj) : warning LNK4006: archive_read_support_compression_program_signature already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_program.obj) : warning LNK4006: archive_read_support_filter_program already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_program.obj) : warning LNK4006: archive_read_support_filter_program_signature already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_rpm.obj) : warning LNK4006: archive_read_support_compression_rpm already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_rpm.obj) : warning LNK4006: archive_read_support_filter_rpm already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_uu.obj) : warning LNK4006: archive_read_support_compression_uu already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_uu.obj) : warning LNK4006: archive_read_support_filter_uu already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_xz.obj) : warning LNK4006: archive_read_support_compression_lzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_xz.obj) : warning LNK4006: archive_read_support_compression_lzma already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_xz.obj) : warning LNK4006: archive_read_support_compression_xz already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_xz.obj) : warning LNK4006: archive_read_support_filter_lzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_xz.obj) : warning LNK4006: archive_read_support_filter_lzma already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_filter_xz.obj) : warning LNK4006: archive_read_support_filter_xz already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_7zip.obj) : warning LNK4006: archive_read_support_format_7zip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_all.obj) : warning LNK4006: archive_read_support_format_all already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_ar.obj) : warning LNK4006: archive_read_support_format_ar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_by_code.obj) : warning LNK4006: archive_read_support_format_by_code already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_cab.obj) : warning LNK4006: archive_read_support_format_cab already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_cpio.obj) : warning LNK4006: archive_read_support_format_cpio already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_empty.obj) : warning LNK4006: archive_read_support_format_empty already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_iso9660.obj) : warning LNK4006: archive_read_support_format_iso9660 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_lha.obj) : warning LNK4006: archive_read_support_format_lha already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_mtree.obj) : warning LNK4006: archive_read_support_format_mtree already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_rar.obj) : warning LNK4006: archive_read_support_format_rar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_raw.obj) : warning LNK4006: archive_read_support_format_raw already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_tar.obj) : warning LNK4006: archive_read_support_format_gnutar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_tar.obj) : warning LNK4006: archive_read_support_format_tar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_warc.obj) : warning LNK4006: archive_read_support_format_warc already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_xar.obj) : warning LNK4006: archive_read_support_format_xar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_zip.obj) : warning LNK4006: archive_read_support_format_zip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_zip.obj) : warning LNK4006: archive_read_support_format_zip_streamable already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_support_format_zip.obj) : warning LNK4006: archive_read_support_format_zip_seekable already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_version_number already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_version_string already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_version_details already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_zlib_version already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_liblzma_version already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_bzlib_version already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_liblz4_version already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_position_compressed already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_position_uncompressed already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_compression_name already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_compression already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_errno already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_error_string already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_format_name already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_format already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_clear_error already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_set_error already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_copy_error already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_file_count already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_util.obj) : warning LNK4006: archive_utility_string_sort already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_read_next_header already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_read_next_header2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_read_data_block already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_read_close already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_read_free already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_read_finish already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_write_header already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_write_data already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_write_data_block already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_write_finish_entry already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_write_close already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_write_fail already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_write_free already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_write_finish already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_free already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_filter_count already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_filter_bytes already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_filter_code already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_virtual.obj) : warning LNK4006: archive_filter_name already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write.obj) : warning LNK4006: archive_write_new already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write.obj) : warning LNK4006: archive_write_set_bytes_per_block already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write.obj) : warning LNK4006: archive_write_get_bytes_per_block already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write.obj) : warning LNK4006: archive_write_set_bytes_in_last_block already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write.obj) : warning LNK4006: archive_write_get_bytes_in_last_block already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write.obj) : warning LNK4006: archive_write_set_skip_file already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write.obj) : warning LNK4006: archive_write_open already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_disk_set_standard_lookup.obj) : warning LNK4006: archive_write_disk_set_standard_lookup already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_open_fd.obj) : warning LNK4006: archive_write_open_fd already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_open_file.obj) : warning LNK4006: archive_write_open_FILE already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_open_filename.obj) : warning LNK4006: archive_write_open_filename already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_open_filename.obj) : warning LNK4006: archive_write_open_filename_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_open_filename.obj) : warning LNK4006: archive_write_open_file already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_open_memory.obj) : warning LNK4006: archive_write_open_memory already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter.obj) : warning LNK4006: archive_write_add_filter already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_b64encode.obj) : warning LNK4006: archive_write_add_filter_b64encode already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_by_name.obj) : warning LNK4006: archive_write_add_filter_by_name already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_bzip2.obj) : warning LNK4006: archive_write_set_compression_bzip2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_bzip2.obj) : warning LNK4006: archive_write_add_filter_bzip2 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_compress.obj) : warning LNK4006: archive_write_set_compression_compress already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_compress.obj) : warning LNK4006: archive_write_add_filter_compress already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_grzip.obj) : warning LNK4006: archive_write_add_filter_grzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_gzip.obj) : warning LNK4006: archive_write_set_compression_gzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_gzip.obj) : warning LNK4006: archive_write_add_filter_gzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_lrzip.obj) : warning LNK4006: archive_write_add_filter_lrzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_lz4.obj) : warning LNK4006: archive_write_add_filter_lz4 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_lzop.obj) : warning LNK4006: archive_write_add_filter_lzop already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_none.obj) : warning LNK4006: archive_write_set_compression_none already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_none.obj) : warning LNK4006: archive_write_add_filter_none already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_program.obj) : warning LNK4006: archive_write_set_compression_program already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_program.obj) : warning LNK4006: archive_write_add_filter_program already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_uuencode.obj) : warning LNK4006: archive_write_add_filter_uuencode already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_xz.obj) : warning LNK4006: archive_write_set_compression_lzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_xz.obj) : warning LNK4006: archive_write_set_compression_lzma already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_xz.obj) : warning LNK4006: archive_write_set_compression_xz already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_xz.obj) : warning LNK4006: archive_write_add_filter_lzip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_xz.obj) : warning LNK4006: archive_write_add_filter_lzma already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_add_filter_xz.obj) : warning LNK4006: archive_write_add_filter_xz already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format.obj) : warning LNK4006: archive_write_set_format already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_7zip.obj) : warning LNK4006: archive_write_set_format_7zip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_ar.obj) : warning LNK4006: archive_write_set_format_ar_bsd already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_ar.obj) : warning LNK4006: archive_write_set_format_ar_svr4 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_by_name.obj) : warning LNK4006: archive_write_set_format_by_name already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_cpio.obj) : warning LNK4006: archive_write_set_format_cpio already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_cpio_newc.obj) : warning LNK4006: archive_write_set_format_cpio_newc already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_filter_by_ext.obj) : warning LNK4006: archive_write_set_format_filter_by_ext already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_filter_by_ext.obj) : warning LNK4006: archive_write_set_format_filter_by_ext_def already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_gnutar.obj) : warning LNK4006: archive_write_set_format_gnutar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_iso9660.obj) : warning LNK4006: archive_write_set_format_iso9660 already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_mtree.obj) : warning LNK4006: archive_write_set_format_mtree already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_mtree.obj) : warning LNK4006: archive_write_set_format_mtree_classic already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_pax.obj) : warning LNK4006: archive_write_set_format_pax already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_pax.obj) : warning LNK4006: archive_write_set_format_pax_restricted already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_raw.obj) : warning LNK4006: archive_write_set_format_raw already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_shar.obj) : warning LNK4006: archive_write_set_format_shar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_shar.obj) : warning LNK4006: archive_write_set_format_shar_dump already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_ustar.obj) : warning LNK4006: archive_write_set_format_ustar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_v7tar.obj) : warning LNK4006: archive_write_set_format_v7tar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_warc.obj) : warning LNK4006: archive_write_set_format_warc already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_xar.obj) : warning LNK4006: archive_write_set_format_xar already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_zip.obj) : warning LNK4006: archive_write_set_format_zip already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_zip.obj) : warning LNK4006: archive_write_zip_set_compression_deflate already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_format_zip.obj) : warning LNK4006: archive_write_zip_set_compression_store already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_options.obj) : warning LNK4006: archive_write_set_format_option already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_options.obj) : warning LNK4006: archive_write_set_filter_option already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_options.obj) : warning LNK4006: archive_write_set_option already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_options.obj) : warning LNK4006: archive_write_set_options already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_passphrase.obj) : warning LNK4006: archive_write_set_passphrase already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_set_passphrase.obj) : warning LNK4006: archive_write_set_passphrase_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_entry_copy_bhfi.obj) : warning LNK4006: archive_entry_copy_bhfi already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_new already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_set_symlink_logical already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_set_symlink_physical already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_set_symlink_hybrid already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_entry_from_file already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_gname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_uname already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_set_gname_lookup already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_set_uname_lookup already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_open already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_open_w already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_descend already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_can_descend already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_current_filesystem already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_current_filesystem_is_synthetic already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_current_filesystem_is_remote already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_set_atime_restored already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_set_behavior already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_set_matching already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_read_disk_windows.obj) : warning LNK4006: archive_read_disk_set_metadata_filter_callback already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_disk_windows.obj) : warning LNK4006: archive_write_disk_new already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_disk_windows.obj) : warning LNK4006: archive_write_disk_set_skip_file already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_disk_windows.obj) : warning LNK4006: archive_write_disk_set_options already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_disk_windows.obj) : warning LNK4006: archive_write_disk_set_group_lookup already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_disk_windows.obj) : warning LNK4006: archive_write_disk_set_user_lookup already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_disk_windows.obj) : warning LNK4006: archive_write_disk_gid already defined in archive.lib(archive.dll); second definition ignored
+archive_static.lib(archive_write_disk_windows.obj) : warning LNK4006: archive_write_disk_uid already defined in archive.lib(archive.dll); second definition ignored
+  ArchiveFunctions.vcxproj -> C:\Users\Mi Notebook\Desktop\ArchiveFunctions\x64\Debug\ArchiveFunctions.lib
