@@ -39,9 +39,9 @@ typedef wstring String;
 
 class ArchiveFunction : public IAbstractArchive {
 	int Flag;
-	string tmp_path;
 	OPENFILENAME ofn = { 0 };
-	string glob_path, glob_arch;
+	string glob_path, glob_arch, tmp_path, woutname;
+	wstring wstr;
 	wchar_t file[1024] = { 0 };
 
 	string lastWordFile(string word);
@@ -54,8 +54,9 @@ class ArchiveFunction : public IAbstractArchive {
 	void openArchive(HWND hWnd);
 	void openDirectory();
 	void saveFile();
+	void extract(string archive_path, string save_path);
 public:
-	void extract(const char* filename) override;
+	void extractArchive(HWND hWnd, wstring str, string& path, string& outname) override;
 	void addFileInArchive() override;
 	void close(HWND hWnd1, HWND hWnd2) override;
 	void writeArchiveSingle(HWND hWnd, wstring str, string path, vector<string> argv, string outname) override;
