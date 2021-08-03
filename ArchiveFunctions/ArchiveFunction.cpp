@@ -145,8 +145,8 @@ void ArchiveFunction::extract(string archive_path, string save_path) {
     }
 }
 
-void ArchiveFunction::extractArchive(HWND hWnd, wstring str, string& path, string& outname) {
-    openFile(hWnd);
+void ArchiveFunction::extractArchive(wstring str, string& path, string& outname) {
+    openFile();
 
     if (GetOpenFileName(&ofn) == TRUE) {
         str = ofn.lpstrFile;
@@ -160,11 +160,7 @@ void ArchiveFunction::extractArchive(HWND hWnd, wstring str, string& path, strin
 
             extract(path, outname);
         }
-    }
-
-
-
-    
+    }    
 }
 
 int ArchiveFunction::copy_data(struct archive* ar, struct archive* aw) {
@@ -240,16 +236,8 @@ void ArchiveFunction::addFileInArchive() {
     readArchive(glob_arch);
 }
 
-void ArchiveFunction::close(HWND hWnd1, HWND hWnd2) {
-    SetWindowPos(hWnd1, HWND_NOTOPMOST, 0, 0, 0, 0, NULL);
-    ShowWindow(hWnd1, SW_HIDE);
-    EnableWindow(hWnd2, TRUE);
-    SetWindowPos(hWnd2, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE);
-}
-
-void ArchiveFunction::openFile(HWND hWnd) {
+void ArchiveFunction::openFile() {
     ofn.lStructSize = sizeof(ofn);
-    ofn.hwndOwner = hWnd;
     ofn.lpstrFile = file;
     ofn.nMaxFile = sizeof(file);
     ofn.lpstrFilter = _T("All\0*.*\0Text\0*.TXT\0");
@@ -274,9 +262,8 @@ void ArchiveFunction::openDirectory() {
     ofn.lpstrTitle = TEXT("title");
 }
 
-void ArchiveFunction::openArchive(HWND hWnd) {
+void ArchiveFunction::openArchive() {
     ofn.lStructSize = sizeof(ofn);
-    ofn.hwndOwner = hWnd;
     ofn.lpstrFile = file;
     ofn.nMaxFile = sizeof(file);
     ofn.lpstrFilter = _T("zip\0*.zip*\0Text\0*.TXT\0");
@@ -304,9 +291,9 @@ void ArchiveFunction::saveFile() {
     ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
 }
 
-void ArchiveFunction::writeArchiveSingle(HWND hWnd, wstring str, string path, vector<string> argv, string outname) {
+void ArchiveFunction::writeArchiveSingle(wstring str, string path, vector<string> argv, string outname) {
     Flag = 0;
-    openFile(hWnd);
+    openFile();
 
     if (GetOpenFileName(&ofn) == TRUE) {
         str = ofn.lpstrFile;
@@ -348,8 +335,8 @@ void ArchiveFunction::writeArchiveDirectory(wstring str, string path, vector<str
     }
 }
 
-void ArchiveFunction::selectFile(HWND& hWnd, wstring& str) {
-    openFile(hWnd);
+void ArchiveFunction::selectFile(wstring& str) {
+    openFile();
 
     if (GetOpenFileName(&ofn) == TRUE) {
         str = ofn.lpstrFile;
@@ -357,8 +344,8 @@ void ArchiveFunction::selectFile(HWND& hWnd, wstring& str) {
     }
 }
 
-void ArchiveFunction::selectArchive(HWND& hWnd, wstring& str) {
-    openArchive(hWnd);
+void ArchiveFunction::selectArchive(wstring& str) {
+    openArchive();
 
     if (GetOpenFileName(&ofn) == TRUE) {
         str = ofn.lpstrFile;

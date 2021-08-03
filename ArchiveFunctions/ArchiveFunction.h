@@ -50,17 +50,16 @@ class ArchiveFunction : public IAbstractArchive {
 	void readArchive(const string path);
 	void write_archive(const string outname_tmp, const vector<string> filename);
 	void chekBrokenPath(vector<string>& vec);
-	void openFile(HWND hWnd);
-	void openArchive(HWND hWnd);
+	void openFile();
+	void openArchive();
 	void openDirectory();
 	void saveFile();
 	void extract(string archive_path, string save_path);
 public:
-	void extractArchive(HWND hWnd, wstring str, string& path, string& outname) override;
+	void extractArchive(wstring str, string& path, string& outname) override;
 	void addFileInArchive() override;
-	void close(HWND hWnd1, HWND hWnd2) override;
-	void writeArchiveSingle(HWND hWnd, wstring str, string path, vector<string> argv, string outname) override;
+	void writeArchiveSingle(wstring str, string path, vector<string> argv, string outname) override;
 	void writeArchiveDirectory(wstring str, string path, vector<string> argv, string outname) override;
-	void selectFile(HWND& hWnd, wstring& str) override;
-	void selectArchive(HWND& hWnd, wstring& str) override;
+	void selectFile(wstring& str) override;
+	void selectArchive(wstring& str) override;
 };
