@@ -145,7 +145,7 @@ void ArchiveFunction::extract(string archive_path, string save_path) {
     }
 }
 
-void ArchiveFunction::extractArchive(wstring str, string& path, string& outname) {
+void ArchiveFunction::extractArchive() {
     openFile();
 
     if (GetOpenFileName(&ofn) == TRUE) {
@@ -291,7 +291,7 @@ void ArchiveFunction::saveFile() {
     ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
 }
 
-void ArchiveFunction::writeArchiveSingle(wstring str, string path, vector<string> argv, string outname) {
+void ArchiveFunction::writeArchiveSingle() {
     Flag = 0;
     openFile();
 
@@ -312,7 +312,7 @@ void ArchiveFunction::writeArchiveSingle(wstring str, string path, vector<string
     }
 }
 
-void ArchiveFunction::writeArchiveDirectory(wstring str, string path, vector<string> argv, string outname) {
+void ArchiveFunction::writeArchiveDirectory() {
     Flag = 1;
     openDirectory();
 
@@ -335,7 +335,7 @@ void ArchiveFunction::writeArchiveDirectory(wstring str, string path, vector<str
     }
 }
 
-void ArchiveFunction::selectFile(wstring& str) {
+void ArchiveFunction::selectFile() {
     openFile();
 
     if (GetOpenFileName(&ofn) == TRUE) {
@@ -344,7 +344,7 @@ void ArchiveFunction::selectFile(wstring& str) {
     }
 }
 
-void ArchiveFunction::selectArchive(wstring& str) {
+void ArchiveFunction::selectArchive() {
     openArchive();
 
     if (GetOpenFileName(&ofn) == TRUE) {

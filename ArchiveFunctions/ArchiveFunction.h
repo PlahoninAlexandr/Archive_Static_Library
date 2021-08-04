@@ -40,8 +40,9 @@ typedef wstring String;
 class ArchiveFunction : public IAbstractArchive {
 	int Flag;
 	OPENFILENAME ofn = { 0 };
-	string glob_path, glob_arch, tmp_path, woutname;
-	wstring wstr;
+	string glob_path, glob_arch, tmp_path, woutname, path, outname;
+	vector<string> argv;
+	wstring wstr, str;
 	wchar_t file[1024] = { 0 };
 
 	string lastWordFile(string word);
@@ -56,10 +57,10 @@ class ArchiveFunction : public IAbstractArchive {
 	void saveFile();
 	void extract(string archive_path, string save_path);
 public:
-	void extractArchive(wstring str, string& path, string& outname) override;
+	void extractArchive() override;
 	void addFileInArchive() override;
-	void writeArchiveSingle(wstring str, string path, vector<string> argv, string outname) override;
-	void writeArchiveDirectory(wstring str, string path, vector<string> argv, string outname) override;
-	void selectFile(wstring& str) override;
-	void selectArchive(wstring& str) override;
+	void writeArchiveSingle() override;
+	void writeArchiveDirectory() override;
+	void selectFile() override;
+	void selectArchive() override;
 };
