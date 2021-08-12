@@ -11,9 +11,10 @@ string ArchiveFunction::lastWordDirectory(string word) {
     string token;
     while (getline(iss, token, '\\')) vec.push_back(token);
 
-    if (vec[vec.size() - 3] != tmp_path) return vec[vec.size() - 3] + "\\" + vec[vec.size() - 2] + "\\" + vec[vec.size() - 1];
-    else if (vec[vec.size() - 2] != tmp_path) return vec[vec.size() - 2] + "\\" + vec[vec.size() - 1];
-    else return vec[vec.size() - 1];
+    if (vec[vec.size() - 2] == tmp_path) return vec[vec.size() - 1];
+    else if (vec[vec.size() - 3] == tmp_path) return vec[vec.size() - 2] + "\\" + vec[vec.size() - 1];
+    else if (vec[vec.size() - 4] == tmp_path) return vec[vec.size() - 3] + "\\" + vec[vec.size() - 2] + "\\" + vec[vec.size() - 1];
+    else return vec[vec.size() - 4] + "\\" + vec[vec.size() - 3] + "\\" + vec[vec.size() - 2] + "\\" + vec[vec.size() - 1];
 }
 
 string ArchiveFunction::lastWordFile(string word) {
@@ -83,17 +84,21 @@ void ArchiveFunction::readArchive(const string path) {
 }
 
 void ArchiveFunction::chekBrokenPath(vector<string>& vec) {
-    auto iter = vec.begin();
-    vector<string> second_vec(vec);
     string s;
-    int tmp = 0;
-    for (vector<string>::reverse_iterator it = second_vec.rbegin(); it != second_vec.rend(); ++it) {
+    int dist;
+
+    for (auto it = vec.begin(); it != vec.end(); ++it) {
         s = *it;
-        size_t foundIndex = s.find(".");
-        if (foundIndex != string::npos) continue;
-        tmp = distance(second_vec.rbegin(), it);
-        advance(iter, vec.size() - tmp - 1);
-        iter = vec.erase(iter);
+        char arr[255];
+        strcpy_s(arr, s.c_str());
+        for (int i = 0; i < strlen(arr); i++) {
+            if (arr[i] == '.') {
+                it = vec.erase(it);
+                dist = distance(vec.begin(), it);
+                advance(it, (dist - 1));
+                continue;
+            }
+        }
     }
 }
 
@@ -201,7 +206,7 @@ void ArchiveFunction::addFileInArchive() {
         auto_cleanup<struct archive> b(archive_read_new(), [](struct archive* b) { archive_read_free(b); });
         archive_read_support_filter_all(&*b);
         archive_read_support_format_all(&*b);
-        archive_read_open_filename(&*b, glob_arch.c_str(), 10240);
+        archive_read_open_filename(&*b, global_archive.c_str(), 10240);
         while (archive_read_next_header(&*b, &entry) == ARCHIVE_OK) {
             archive_write_header(&*a, entry);
             aUnzipSize = archive_read_data(&*b, aUnzipBlob, aUnzipBlobSize);
@@ -232,8 +237,8 @@ void ArchiveFunction::addFileInArchive() {
         ss.clear();
         archive_entry_free(entry);
     }
-    filesystem::rename("arch.zip", glob_arch.c_str());
-    readArchive(glob_arch);
+    filesystem::rename("arch.zip", global_archive.c_str());
+    readArchive(global_archive);
 }
 
 void ArchiveFunction::openFile() {
@@ -322,7 +327,7 @@ void ArchiveFunction::writeArchiveDirectory() {
 
         for (const auto& entry : fs::recursive_directory_iterator(path))
             argv.push_back(entry.path().string());
-        chekBrokenPath(argv);
+        //chekBrokenPath(argv);
 
         saveFile();
 
@@ -349,6 +354,138 @@ void ArchiveFunction::selectArchive() {
 
     if (GetOpenFileName(&ofn) == TRUE) {
         str = ofn.lpstrFile;
-        glob_arch = string(str.begin(), str.end());
+        global_archive = string(str.begin(), str.end());
     }
+}
+
+void ArchiveFunction::DoArchiveParam(std::vector<float>& size_, std::vector<std::string>& name_, std::vector<int>& height_) {
+    openArchive();
+
+    if (GetOpenFileName(&ofn) == TRUE) {
+        str = ofn.lpstrFile;
+        global_archive = string(str.begin(), str.end());
+
+        amount_size_files = sizeFiles(global_archive, number);
+        sort(amount_size_files.begin(), amount_size_files.end());
+
+        fstream file(global_archive);
+        file.seekg(0, std::ios::end);
+        max_size = file.tellg();
+        file.close();
+        max_size /= 1024;
+        max_size /= 1024;
+
+        for (auto arg : amount_size_files) {
+            size.push_back(arg.first);
+            name.push_back(arg.second);
+        }
+        ++number;
+
+        size.push_back(max_size);
+        name.push_back(lastWordFile(global_archive));
+
+        ratioCpp(max_size, size, height);
+
+        for (int i = 0; i < size.size(); ++i) size_.push_back(size[i]);
+        for (int i = 0; i < name.size(); ++i) name_.push_back(name[i]);
+        for (int i = 0; i < height.size(); ++i) height_.push_back(height[i]);
+    }
+}
+
+void ArchiveFunction::DoFileParam(std::vector<float>& size_, std::vector<std::string>& name_, std::vector<int>& height_) {
+    openArchive();
+
+    if (GetOpenFileName(&ofn) == TRUE) {
+        str = ofn.lpstrFile;
+        global_archive = string(str.begin(), str.end());
+
+        amount_size_files = sizeFiles(global_archive, number);
+        sort(amount_size_files.begin(), amount_size_files.end());
+
+        for (auto arg : amount_size_files) {
+            size.push_back(arg.first);
+            name.push_back(arg.second);
+        }
+
+        auto it = size.begin();
+        advance(it, size.size() - 1);
+        max_size = *it;
+
+        ratioCs(max_size, size, height);
+        for (int i = 0; i < size.size(); ++i) size_.push_back(size[i]);
+        for (int i = 0; i < name.size(); ++i) name_.push_back(name[i]);
+        for (int i = 0; i < height.size(); ++i) height_.push_back(height[i]);
+    }
+}
+
+vector<pair<float, string>> ArchiveFunction::sizeFiles(const string path, int& count) {
+    struct archive_entry* entry;
+    int r;
+    float size;
+    string text;
+    vector <pair<float, string>> files;
+
+    auto_cleanup<struct archive> a(archive_read_new(), [](struct archive* a) { archive_read_free(a); });
+    archive_read_support_filter_all(&*a);
+    archive_read_support_format_all(&*a);
+    r = archive_read_open_filename(&*a, path.c_str(), 10240);
+    if (r != ARCHIVE_OK)
+        exit(1);
+    while (archive_read_next_header(&*a, &entry) == ARCHIVE_OK) {
+        text = archive_entry_pathname(entry);
+        size = archive_entry_size(entry);
+        size /= 1024;
+        size /= 1024;
+        files.push_back(make_pair(size, text));
+        count++;
+        archive_read_data_skip(&*a);
+    }
+    return files;
+}
+
+void ArchiveFunction::ratioCs(float max, vector<float> vec, vector<int>& hg) {
+    vector<int>mnb;
+    for (auto i : vec) {
+        mnb.push_back(i / max * 10);
+    }
+    for (auto i : mnb) {
+        hg.push_back(i);
+    }
+}
+
+void ArchiveFunction::ratioCpp(float max, vector<float> vec, vector<int>& hg) {
+    vector<int>mnb;
+    for (auto i : vec) {
+        mnb.push_back(i / max * 100);
+    }
+    for (auto i : mnb) {
+        hg.push_back(250 - (i * 2));
+    }
+    sort(hg.begin(), hg.end(), greater<>());
+}
+
+void ArchiveFunction::Draw(HWND& hWnd) {
+    hdc = BeginPaint(hWnd, &ps);
+    SelectObject(hdc, hFont);
+    for (int i = number - 1; i >= 0; --i) {
+        r.top = 250;
+        r.left = lft;
+        r.right = rht;
+        r.bottom = height[i];
+
+        wstring tmp_name(name[i].begin(), name[i].end());
+        TextOut(hdc, rht, height[i] - 30, tmp_name.c_str(), tmp_name.size());
+
+        string s = to_string(size[i]);
+        wstring tmp2(s.begin(), s.end());
+        TextOut(hdc, rht, 250, tmp2.c_str(), tmp2.size());
+
+        FillRect(hdc, &r, HBRUSH(CreateSolidBrush(RGB(27, 58, 194))));
+        lft += 80;
+        rht += 80;
+    }
+
+    EndPaint(hWnd, &ps);
+    UpdateWindow(hWnd);
+    ShowWindow(hWnd, SW_SHOW);
 }
