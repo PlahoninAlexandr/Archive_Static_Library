@@ -7,6 +7,7 @@
 class IAbstractArchive {
 public:
 	virtual ~IAbstractArchive() {};
+
 	virtual void extractArchive() = 0;
 	virtual void addFileInArchive() = 0;
 	virtual void writeArchiveSingle() = 0;

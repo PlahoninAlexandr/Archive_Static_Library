@@ -3,6 +3,7 @@
 template<typename T>
 using auto_cleanup = unique_ptr<T, std::function<void(T*)>>;
 
+// when you archive a directory, the attached files remain nested
 string ArchiveFunction::lastWordDirectory(string word) {
     vector<string> vec;
 
@@ -17,6 +18,7 @@ string ArchiveFunction::lastWordDirectory(string word) {
     else return vec[vec.size() - 4] + "\\" + vec[vec.size() - 3] + "\\" + vec[vec.size() - 2] + "\\" + vec[vec.size() - 1];
 }
 
+// removes the path and leaves the filename
 string ArchiveFunction::lastWordFile(string word) {
     vector<string> vec;
 
@@ -28,6 +30,7 @@ string ArchiveFunction::lastWordFile(string word) {
     return vec[vec.size() - 1];
 }
 
+// archiving function
 void ArchiveFunction::write_archive(const string outname_tmp, const vector<string> filename) {
     string outname = lastWordFile(outname_tmp);
     struct stat st;
@@ -64,6 +67,7 @@ void ArchiveFunction::write_archive(const string outname_tmp, const vector<strin
     readArchive(outname_tmp);
 }
 
+// read file name in archive
 void ArchiveFunction::readArchive(const string path) {
     struct archive_entry* entry;
     int r;
@@ -83,10 +87,11 @@ void ArchiveFunction::readArchive(const string path) {
     MessageBoxA(NULL, text.c_str(), "List", MB_ICONINFORMATION | MB_OKCANCEL);
 }
 
+// remove path folder
 void ArchiveFunction::chekBrokenPath(vector<string>& vec) {
     string s;
     int dist;
-    // если в пути к файлу нет точки то нужно его удалить (значит это не файл, а папка в которой они лежат)
+    // if there is no dot in the path to the file, then you need to delete it (then this is not a file, but the folder in which they are located)
     for (auto it = vec.begin(); it != vec.end(); ++it) {
         dist = 0;
         s = *it;
@@ -99,6 +104,7 @@ void ArchiveFunction::chekBrokenPath(vector<string>& vec) {
     }
 }
 
+// extract archive
 void ArchiveFunction::extract(string archive_path, string save_path) {
     struct archive_entry* entry;
     string destination = save_path;
@@ -147,6 +153,7 @@ void ArchiveFunction::extract(string archive_path, string save_path) {
     }
 }
 
+// extract interface
 void ArchiveFunction::extractArchive() {
     openFile();
 
@@ -165,6 +172,7 @@ void ArchiveFunction::extractArchive() {
     }    
 }
 
+// use in extract() and addFileInArchive()
 int ArchiveFunction::copy_data(struct archive* ar, struct archive* aw) {
     int r;
     const void* buff;
@@ -185,6 +193,7 @@ int ArchiveFunction::copy_data(struct archive* ar, struct archive* aw) {
     }
 }
 
+// add new file in archive
 void ArchiveFunction::addFileInArchive() {
     struct archive_entry* entry;
     struct stat st;
@@ -238,7 +247,8 @@ void ArchiveFunction::addFileInArchive() {
     readArchive(global_archive);
 }
 
-void ArchiveFunction::openFile() {
+//  ALL open... and save... it's winapi openFileDialog
+void ArchiveFunction::openFile() {      
     ofn.lStructSize = sizeof(ofn);
     ofn.lpstrFile = file;
     ofn.nMaxFile = sizeof(file);
@@ -293,7 +303,8 @@ void ArchiveFunction::saveFile() {
     ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
 }
 
-void ArchiveFunction::writeArchiveSingle() {
+// write archive with single file interface
+void ArchiveFunction::writeArchiveSingle() {        // write archive with single file interface
     Flag = 0;
     openFile();
 
@@ -314,7 +325,8 @@ void ArchiveFunction::writeArchiveSingle() {
     }
 }
 
-void ArchiveFunction::writeArchiveDirectory() {
+// write archive with some files interface
+void ArchiveFunction::writeArchiveDirectory() {     // write archive with some files interface
     Flag = 1;
     openDirectory();
 
@@ -337,6 +349,7 @@ void ArchiveFunction::writeArchiveDirectory() {
     }
 }
 
+// select file for addFileInArchive()
 void ArchiveFunction::selectFile() {
     openFile();
 
@@ -346,6 +359,7 @@ void ArchiveFunction::selectFile() {
     }
 }
 
+// select archive for addFileInArchive()
 void ArchiveFunction::selectArchive() {
     openArchive();
 
@@ -355,6 +369,7 @@ void ArchiveFunction::selectArchive() {
     }
 }
 
+// parameters for drawing diagram with archive size
 void ArchiveFunction::DoArchiveParam(std::vector<float>& size_, std::vector<std::string>& name_, std::vector<int>& height_) {
     openArchive();
 
@@ -389,6 +404,7 @@ void ArchiveFunction::DoArchiveParam(std::vector<float>& size_, std::vector<std:
     }
 }
 
+// parameters for drawing diagram with file size
 void ArchiveFunction::DoFileParam(std::vector<float>& size_, std::vector<std::string>& name_, std::vector<int>& height_) {
     openArchive();
 
@@ -415,6 +431,7 @@ void ArchiveFunction::DoFileParam(std::vector<float>& size_, std::vector<std::st
     }
 }
 
+// get name and size files in archive
 vector<pair<float, string>> ArchiveFunction::sizeFiles(const string path, int& count) {
     struct archive_entry* entry;
     int r;
@@ -440,6 +457,7 @@ vector<pair<float, string>> ArchiveFunction::sizeFiles(const string path, int& c
     return files;
 }
 
+// using for DoFileParam(diagram on c#/wpf)
 void ArchiveFunction::ratioCs(float max, vector<float> vec, vector<int>& hg) {
     vector<int>mnb;
     for (auto i : vec) {
@@ -450,6 +468,19 @@ void ArchiveFunction::ratioCs(float max, vector<float> vec, vector<int>& hg) {
     }
 }
 
+// using for DoArchiveParam(diagram on c++/winapi)
+void ArchiveFunction::ratioCpp(float max, vector<float> vec, vector<int>& hg) {
+    vector<int>mnb;
+    for (auto i : vec) {
+        mnb.push_back(i / max * 100);
+    }
+    for (auto i : mnb) {
+        hg.push_back(250 - (i * 2));
+    }
+    sort(hg.begin(), hg.end(), greater<>());
+}
+
+// fake callback for winapi window
 LRESULT CALLBACK ArchiveFunction::WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
     ArchiveFunction* me = reinterpret_cast<ArchiveFunction*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
@@ -457,6 +488,7 @@ LRESULT CALLBACK ArchiveFunction::WndProc(HWND hwnd, UINT msg, WPARAM wParam, LP
     return DefWindowProc(hwnd, msg, wParam, lParam);
 }
 
+// true callback for winapi window
 LRESULT CALLBACK ArchiveFunction::realWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     switch (msg)
     {
@@ -494,17 +526,7 @@ LRESULT CALLBACK ArchiveFunction::realWndProc(HWND hwnd, UINT msg, WPARAM wParam
     return DefWindowProc(hwnd, msg, wParam, lParam);
 }
 
-void ArchiveFunction::ratioCpp(float max, vector<float> vec, vector<int>& hg) {
-    vector<int>mnb;
-    for (auto i : vec) {
-        mnb.push_back(i / max * 100);
-    }
-    for (auto i : mnb) {
-        hg.push_back(250 - (i * 2));
-    }
-    sort(hg.begin(), hg.end(), greater<>());
-}
-
+// create winapi window and paint diagram in callback::WM_PAINT:
 void ArchiveFunction::Draw() {
     WNDCLASS my_wndclass_struct;
 
