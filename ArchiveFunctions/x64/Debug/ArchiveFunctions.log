@@ -2,27 +2,29 @@
   ArchiveFunction.cpp
 C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(57,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(60,50): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(97,32): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(183,37): warning C4244: '=': conversion from 'la_ssize_t' to 'int', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(212,43): warning C4244: '=': conversion from 'la_ssize_t' to 'long', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(215,47): warning C4244: '=': conversion from 'la_ssize_t' to 'long', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(232,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(235,50): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(324,34): warning C4805: '==': unsafe mix of type 'BOOL' and type 'bool' in operation
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(373,30): warning C4244: '=': conversion from 'std::streamoff' to 'float', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(436,34): warning C4244: '=': conversion from 'la_int64_t' to 'float', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(449,31): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(180,37): warning C4244: '=': conversion from 'la_ssize_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(209,43): warning C4244: '=': conversion from 'la_ssize_t' to 'long', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(212,47): warning C4244: '=': conversion from 'la_ssize_t' to 'long', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(229,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(232,50): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(321,34): warning C4805: '==': unsafe mix of type 'BOOL' and type 'bool' in operation
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(370,30): warning C4244: '=': conversion from 'std::streamoff' to 'float', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(433,34): warning C4244: '=': conversion from 'la_int64_t' to 'float', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(446,31): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(459,31): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(473,80): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(477,61): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(500,31): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
           with
           [
               _Ty=int
           ]
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(477,76): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(481,57): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(539,59): warning C4311: 'type cast': pointer truncation from 'ArchiveFunction *' to 'long'
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(539,59): warning C4302: 'type cast': truncation from 'ArchiveFunction *' to 'long'
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(539,9): warning C4102: 'HWND': unreferenced label
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(2575,23): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
           with
           [
@@ -48,14 +50,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(158): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(155): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(158): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(155): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
           with
           [
               _Elem=wchar_t,

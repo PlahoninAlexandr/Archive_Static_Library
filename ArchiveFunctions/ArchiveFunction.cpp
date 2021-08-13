@@ -86,19 +86,16 @@ void ArchiveFunction::readArchive(const string path) {
 void ArchiveFunction::chekBrokenPath(vector<string>& vec) {
     string s;
     int dist;
-
+    // если в пути к файлу нет точки то нужно его удалить (значит это не файл, а папка в которой они лежат)
     for (auto it = vec.begin(); it != vec.end(); ++it) {
+        dist = 0;
         s = *it;
         char arr[255];
         strcpy_s(arr, s.c_str());
         for (int i = 0; i < strlen(arr); i++) {
-            if (arr[i] == '.') {
-                it = vec.erase(it);
-                dist = distance(vec.begin(), it);
-                advance(it, (dist - 1));
-                continue;
-            }
+            if (arr[i] == '.') dist = 1;
         }
+        if(!dist) it = vec.erase(it);
     }
 }
 
@@ -327,7 +324,7 @@ void ArchiveFunction::writeArchiveDirectory() {
 
         for (const auto& entry : fs::recursive_directory_iterator(path))
             argv.push_back(entry.path().string());
-        //chekBrokenPath(argv);
+        chekBrokenPath(argv);
 
         saveFile();
 
@@ -453,6 +450,50 @@ void ArchiveFunction::ratioCs(float max, vector<float> vec, vector<int>& hg) {
     }
 }
 
+LRESULT CALLBACK ArchiveFunction::WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+    ArchiveFunction* me = reinterpret_cast<ArchiveFunction*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
+    if (me) return me->realWndProc(hwnd, msg, wParam, lParam);
+    return DefWindowProc(hwnd, msg, wParam, lParam);
+}
+
+LRESULT CALLBACK ArchiveFunction::realWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+    switch (msg)
+    {
+    case WM_PAINT:
+        hdc = BeginPaint(hwnd, &ps);
+        SelectObject(hdc, hFont);
+        for (int i = number - 1; i >= 0; --i) {
+            r.top = 250;
+            r.left = lft;
+            r.right = rht;
+            r.bottom = height[i];
+
+            wstring tmp_name(name[i].begin(), name[i].end());
+            TextOut(hdc, rht, height[i] - 30, tmp_name.c_str(), tmp_name.size());
+
+            string s = to_string(size[i]);
+            wstring tmp2(s.begin(), s.end());
+            TextOut(hdc, rht, 250, tmp2.c_str(), tmp2.size());
+
+            FillRect(hdc, &r, HBRUSH(CreateSolidBrush(RGB(27, 58, 194))));
+            lft += 80;
+            rht += 80;
+        }
+
+        EndPaint(hwnd, &ps);
+        UpdateWindow(hwnd);
+        ShowWindow(hwnd, SW_SHOW);
+        break;
+
+    case WM_CLOSE:
+        PostQuitMessage(0);
+        break;
+    }
+
+    return DefWindowProc(hwnd, msg, wParam, lParam);
+}
+
 void ArchiveFunction::ratioCpp(float max, vector<float> vec, vector<int>& hg) {
     vector<int>mnb;
     for (auto i : vec) {
@@ -464,28 +505,39 @@ void ArchiveFunction::ratioCpp(float max, vector<float> vec, vector<int>& hg) {
     sort(hg.begin(), hg.end(), greater<>());
 }
 
-void ArchiveFunction::Draw(HWND& hWnd) {
-    hdc = BeginPaint(hWnd, &ps);
-    SelectObject(hdc, hFont);
-    for (int i = number - 1; i >= 0; --i) {
-        r.top = 250;
-        r.left = lft;
-        r.right = rht;
-        r.bottom = height[i];
+void ArchiveFunction::Draw() {
+    WNDCLASS my_wndclass_struct;
 
-        wstring tmp_name(name[i].begin(), name[i].end());
-        TextOut(hdc, rht, height[i] - 30, tmp_name.c_str(), tmp_name.size());
+    my_wndclass_struct.style = CS_OWNDC;
 
-        string s = to_string(size[i]);
-        wstring tmp2(s.begin(), s.end());
-        TextOut(hdc, rht, 250, tmp2.c_str(), tmp2.size());
+    my_wndclass_struct.lpfnWndProc = WndProc;
 
-        FillRect(hdc, &r, HBRUSH(CreateSolidBrush(RGB(27, 58, 194))));
-        lft += 80;
-        rht += 80;
-    }
+    my_wndclass_struct.cbClsExtra = 0;
+    my_wndclass_struct.cbWndExtra = 0;
+    my_wndclass_struct.hInstance = GetModuleHandle(NULL);
+    my_wndclass_struct.hIcon = LoadIcon(NULL, IDI_APPLICATION);
+    my_wndclass_struct.hCursor = LoadCursor(NULL, IDC_ARROW);
+    my_wndclass_struct.hbrBackground = (HBRUSH)(6);
+    my_wndclass_struct.lpszMenuName = NULL;
+    my_wndclass_struct.lpszClassName = TEXT("Diagram_C++");
 
-    EndPaint(hWnd, &ps);
-    UpdateWindow(hWnd);
-    ShowWindow(hWnd, SW_SHOW);
+    RegisterClass(&my_wndclass_struct);
+
+    HWND hwnd = CreateWindow(
+        TEXT("Diagram_C++"),
+        TEXT("Diagram"),
+        WS_OVERLAPPEDWINDOW,
+        100,
+        100,
+        800,
+        350,
+        NULL,
+        NULL,
+        GetModuleHandle(NULL),
+        NULL
+    );
+    HWND: SetWindowLongPtr(hwnd, GWLP_USERDATA, (long)this);
+
+    ShowWindow(hwnd, SW_SHOW);
+    UpdateWindow(hwnd);
 }

@@ -53,7 +53,6 @@ class ArchiveFunction : public IAbstractArchive {
 	HFONT hFont = CreateFont(15, 7, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, VARIABLE_PITCH, L"Times New Roman");
 	RECT r;
 	HDC hdc;
-	HWND hWnd1;
 
 	string lastWordFile(string word);
 	string lastWordDirectory(string word);
@@ -69,6 +68,8 @@ class ArchiveFunction : public IAbstractArchive {
 	vector<pair<float, string>> sizeFiles(const string path, int& count);
 	void ratioCpp(float max, vector<float> vec, vector<int>& hg);
 	void ratioCs(float max, vector<float> vec, vector<int>& hg);
+	static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	LRESULT CALLBACK realWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 public:
 	void extractArchive() override;
 	void addFileInArchive() override;
@@ -76,7 +77,7 @@ public:
 	void writeArchiveDirectory() override;
 	void selectFile() override;
 	void selectArchive() override;
-	void Draw(HWND& hWnd) override;
+	void Draw() override;
 	void DoArchiveParam(std::vector<float>& size_, std::vector<std::string>& name_, std::vector<int>& height_) override;
 	void DoFileParam(std::vector<float>& size_, std::vector<std::string>& name_, std::vector<int>& height_) override;
 };
