@@ -20,11 +20,11 @@ C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.c
           [
               _Ty=int
           ]
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(505,80): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(509,61): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(561,59): warning C4311: 'type cast': pointer truncation from 'ArchiveFunction *' to 'long'
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(561,59): warning C4302: 'type cast': truncation from 'ArchiveFunction *' to 'long'
-C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(561,9): warning C4102: 'HWND': unreferenced label
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(506,80): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(510,61): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(562,59): warning C4311: 'type cast': pointer truncation from 'ArchiveFunction *' to 'long'
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(562,59): warning C4302: 'type cast': truncation from 'ArchiveFunction *' to 'long'
+C:\Users\Mi Notebook\Desktop\ArchiveFunctions\ArchiveFunctions\ArchiveFunction.cpp(562,9): warning C4102: 'HWND': unreferenced label
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(2575,23): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
           with
           [

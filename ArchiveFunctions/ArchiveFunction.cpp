@@ -483,7 +483,8 @@ void ArchiveFunction::ratioCpp(float max, vector<float> vec, vector<int>& hg) {
 // fake callback for winapi window
 LRESULT CALLBACK ArchiveFunction::WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
-    ArchiveFunction* me = reinterpret_cast<ArchiveFunction*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
+    auto_cleanup<ArchiveFunction> me(reinterpret_cast<ArchiveFunction*>(GetWindowLongPtr(hwnd, GWLP_USERDATA)), [](ArchiveFunction* me) {});
+    //ArchiveFunction* me = reinterpret_cast<ArchiveFunction*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
     if (me) return me->realWndProc(hwnd, msg, wParam, lParam);
     return DefWindowProc(hwnd, msg, wParam, lParam);
 }
