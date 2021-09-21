@@ -528,22 +528,22 @@ LRESULT CALLBACK ArchiveFunction::realWndProc(HWND hwnd, UINT msg, WPARAM wParam
 
 // create winapi window and paint diagram in callback::WM_PAINT:
 void ArchiveFunction::Draw() {
-    WNDCLASS my_wndclass_struct;
+    WNDCLASS wcex;
 
-    my_wndclass_struct.style = CS_OWNDC;
+    wcex.style = CS_OWNDC;
 
-    my_wndclass_struct.lpfnWndProc = WndProc;
+    wcex.lpfnWndProc = WndProc;
 
-    my_wndclass_struct.cbClsExtra = 0;
-    my_wndclass_struct.cbWndExtra = 0;
-    my_wndclass_struct.hInstance = GetModuleHandle(NULL);
-    my_wndclass_struct.hIcon = LoadIcon(NULL, IDI_APPLICATION);
-    my_wndclass_struct.hCursor = LoadCursor(NULL, IDC_ARROW);
-    my_wndclass_struct.hbrBackground = (HBRUSH)(6);
-    my_wndclass_struct.lpszMenuName = NULL;
-    my_wndclass_struct.lpszClassName = TEXT("Diagram_C++");
+    wcex.cbClsExtra = 0;
+    wcex.cbWndExtra = 0;
+    wcex.hInstance = GetModuleHandle(NULL);
+    wcex.hIcon = LoadIcon(NULL, IDI_APPLICATION);
+    wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
+    wcex.hbrBackground = (HBRUSH)(6);
+    wcex.lpszMenuName = NULL;
+    wcex.lpszClassName = TEXT("Diagram_C++");
 
-    RegisterClass(&my_wndclass_struct);
+    RegisterClass(&wcex);
 
     HWND hwnd = CreateWindow(
         TEXT("Diagram_C++"),
